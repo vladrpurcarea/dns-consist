@@ -32,7 +32,7 @@ Upping the thread count to 5k reduces the runtime to ~6s on my machine. Bear in 
 
 # Findings
 
-Being on the list does not mean
+Disclaimer: being on the list does not necessarily mean a domain is blocked country-wide, or even for a significant portion. Or at all. 
 
 ## Sci-Hub
 
@@ -56,10 +56,7 @@ Being on the list does not mean
 	195.191.182.2    1 ["RU"] []
 	195.208.152.206  1 ["RU"] ["ip91.217.62.219.ipblk.stnsk.ru."]
 	195.238.1.190    1 [""] []
-	199.59.242.150   1 ["US"] ["cb.f5.2bd0.ip4.static.sl-reverse.com."]
 	212.19.108.4     1 ["IT"] ["dns.leonet.it."]
-
-Blocked countries: `France, Martinique, Russia, Italy, Belgium, Austria, Iran, USA`
 
 The first row shows a common technique, redirecting to `127.0.0.1`. 
 
@@ -73,10 +70,7 @@ Amusingly, skydns (`RU`) redirects to.. an advertisement for country wide conten
 	195.23.113.202   4 ["PT"] ["62.169.90.150.rev.optimus.pt.", "62.169.90.154.rev.optimus.pt.", "78-130-39-4.static.net.nos.pt.", "78-130-39-188.static.net.nos.pt."]
 	62.149.188.252   2 ["IT"] ["dns.aruba.it.", "dns4.aruba.it."]
 	146.112.61.106   1 ["US"] []
-	199.59.242.150   1 ["US"] ["cb.f5.2bd0.ip4.static.sl-reverse.com."]
 		
-Blocked countries: `Italy, France, Martinique, USA, Belgium, Portugal`
-
 Sci-Hub's cousin. DNS blocked by the same countries largely.
 
 ## The Pirate Bay
@@ -120,8 +114,6 @@ Sci-Hub's cousin. DNS blocked by the same countries largely.
 	193.113.9.167    1 ["GB"] ["host81-149-21-254.in-addr.btopenworld.com."]
 	202.51.102.120   1 ["ID"] []
 	.. many chinese servers excluded ..
-	
-Blocked countries: `Iran, Italy, Belgium, Martinique, France, Australia, Iran, Indonesia, Hungary, Finland, Germany, Singapore, China, Romania, Netherlands, Russia, Portugal, United Kingdom, Malaysia, Myanmar`, probably all of them somehow..
 
 The Pirate Bay is the most blocked website in the world. 
 
@@ -138,12 +130,11 @@ The Netherlands version `82.215.19.201` is similar, but contains all of the bloc
 	80.241.219.22    1 ["DE"] ["-."]
 	109.123.78.72    1 ["GB"] []
 	127.0.0.1        1 ["US"] ["pns101.cloudns.net."]
-	199.59.242.150   1 ["US"] ["cb.f5.2bd0.ip4.static.sl-reverse.com."]
 	210.102.126.185  1 ["KR"] []
 	
-Blocked countries: `South Korea, Iran, Germany, UK, USA, Netherlands`
-
 Although I was aware of it being blocked in South Korea, I did not expect to find DNS blocks in so many European countries. This is a common theme among blocked North Korean websites
+
+The Korean blocked IP (`210.102.126.185`) is.. just a plain page with "It works" written in h1? It confuses me.
 
 ## Air Koryo (North Korean airline)
 
@@ -152,10 +143,7 @@ Although I was aware of it being blocked in South Korea, I did not expect to fin
 	94.126.23.10     1 ["CH"] []
 	109.123.78.72    1 ["GB"] []
 	127.0.0.1        1 ["US"] ["pns101.cloudns.net."]
-	199.59.242.150   1 ["US"] ["cb.f5.2bd0.ip4.static.sl-reverse.com."]
 	210.102.126.185  1 ["KR"] []
-
-Blocked countries: `South Korea, Netherlands, Germany, Switzerland, UK, USA`
 
 
 ## (North) Korea Elderly Care Fund
@@ -165,9 +153,3 @@ For brevity, this is the same as above. You can view a list of such blocked webs
 ## Best Block Page
 
 Sweden's Bahnhof: http://5.150.254.31/
-
-
-
-
-
-
