@@ -28,5 +28,7 @@ pub struct Analyze {
     #[clap(long)]
     pub threads: Option<usize>,
     #[clap(long)]
-    pub max_servers: Option<usize>
+    pub max_servers: Option<usize>,
+    #[clap(short, long)]
+    pub output_file: Option<String>
 }   

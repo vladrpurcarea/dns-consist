@@ -1,5 +1,6 @@
 use reqwest;
 
+use crate::exit;
 use std::io::Write;
 use std::fs;
 use std::fs::File;
@@ -23,13 +24,13 @@ pub struct DNSServer {
 pub fn update_dns_lists(url: &str) {
     println!("Fetching new DNS servers list from {}", url);
     let dns_list_response = reqwest::blocking::get(url)
-	.expect("Failed to make request to DNS server.")
+	.unwrap_or_else(|_| exit!("Failed to make request to DNS server."))
 	.text()
-	.expect("Failed to read DNS server list response body.");
+	.unwrap_or_else(|_| exit!("Failed to read DNS server list response body."));
 
     println!("Parsing fetched list once to ensure update doesn't break installation.");
     let dns_servers = parse_dns_csv(&dns_list_response)
-	.expect("Failed to parse DNS server list CSV response.");
+	.unwrap_or_else(|_| exit!("Failed to parse DNS server list CSV response."));
 
     write_csv_out(&dns_list_response);
     
@@ -55,17 +56,17 @@ pub fn parse_dns_csv(csv_str: &str) -> Result<Vec<DNSServer>, Box<dyn Error>> {
 
 fn write_csv_out(csv: &str) {
     let mut dns_list_path = dirs::home_dir()
-	.expect("Could not get user home directory.");
+	.unwrap_or_else(|| exit!("Could not get user home directory."));
     dns_list_path.push(DNS_CONSIST_DIR);
 
     fs::create_dir_all(dns_list_path.to_str().unwrap())
-	.expect("Could not create directory in user home directory.");
+	.unwrap_or_else(|_| exit!("Could not create directory in user home directory."));
 
     dns_list_path.push(DNS_LIST_CSV_FILENAME);
     println!("Writing file to {}", dns_list_path.to_str().unwrap());
     
     let mut csv_file = File::create(dns_list_path.to_str().unwrap())
-	.expect("Could not create file in dns-consist directory.");
+	.unwrap_or_else(|_| exit!("Could not create file in dns-consist directory."));
     csv_file.write_all(&csv.as_bytes())
-	.expect("Failed to write dns server list file.");
+	.unwrap_or_else(|_| exit!("Failed to write dns server list file."));
 }
