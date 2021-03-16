@@ -50,7 +50,6 @@ Being on the list does not mean
 	31.204.161.41    1 ["RU"] ["ab-31-204-180-44.mxc.ru."]
 	85.142.29.248    1 ["RU"] ["mail-gw2.portal.amsd.com."]
 	146.112.61.106   1 ["US"] []
-	162.241.226.169  1 ["US"] ["box5358.bluehost.com."]
 	156.154.175.221  1 ["US"] []
 	156.154.176.221  1 ["US"] []
 	193.58.251.1     1 ["RU"] ["dns.skydns.ru."]
@@ -74,7 +73,6 @@ Amusingly, skydns (`RU`) redirects to.. an advertisement for country wide conten
 	195.23.113.202   4 ["PT"] ["62.169.90.150.rev.optimus.pt.", "62.169.90.154.rev.optimus.pt.", "78-130-39-4.static.net.nos.pt.", "78-130-39-188.static.net.nos.pt."]
 	62.149.188.252   2 ["IT"] ["dns.aruba.it.", "dns4.aruba.it."]
 	146.112.61.106   1 ["US"] []
-	162.241.226.169  1 ["US"] ["box5358.bluehost.com."]
 	199.59.242.150   1 ["US"] ["cb.f5.2bd0.ip4.static.sl-reverse.com."]
 		
 Blocked countries: `Italy, France, Martinique, USA, Belgium, Portugal`
@@ -140,7 +138,6 @@ The Netherlands version `82.215.19.201` is similar, but contains all of the bloc
 	80.241.219.22    1 ["DE"] ["-."]
 	109.123.78.72    1 ["GB"] []
 	127.0.0.1        1 ["US"] ["pns101.cloudns.net."]
-	162.241.226.169  1 ["US"] ["box5358.bluehost.com."]
 	199.59.242.150   1 ["US"] ["cb.f5.2bd0.ip4.static.sl-reverse.com."]
 	210.102.126.185  1 ["KR"] []
 	
@@ -155,7 +152,6 @@ Although I was aware of it being blocked in South Korea, I did not expect to fin
 	94.126.23.10     1 ["CH"] []
 	109.123.78.72    1 ["GB"] []
 	127.0.0.1        1 ["US"] ["pns101.cloudns.net."]
-	162.241.226.169  1 ["US"] ["box5358.bluehost.com."]
 	199.59.242.150   1 ["US"] ["cb.f5.2bd0.ip4.static.sl-reverse.com."]
 	210.102.126.185  1 ["KR"] []
 
